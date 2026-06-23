@@ -156,6 +156,11 @@ input, select, textarea {
   transform: translateY(20px);
 }
 
+#slide-3 .slide-header {
+  position: relative;
+  z-index: 4;
+}
+
 .slide-num {
   font-family: var(--font-family-header);
   font-size: 1.5rem;
@@ -788,6 +793,8 @@ input, select, textarea {
   flex-direction: column;
   width: 100%;
   gap: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .grid-header-row, .grid-body-row {

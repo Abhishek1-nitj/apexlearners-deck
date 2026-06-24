@@ -39,21 +39,26 @@ function initScroll() {
   });
 
   document.querySelectorAll('.slide').forEach((slide) => {
-    gsap.fromTo(
-      slide.querySelector('.slide-header'),
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        scrollTrigger: {
-          trigger: slide,
-          containerAnimation: scrollTween,
-          start: 'left 80%',
-          toggleActions: 'play none none reverse'
+    const slideHeader = slide.querySelector('.slide-header');
+    if (slide.id === 'slide-10') {
+      gsap.set(slideHeader, { opacity: 1, y: 0 });
+    } else {
+      gsap.fromTo(
+        slideHeader,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: slide,
+            containerAnimation: scrollTween,
+            start: 'left 80%',
+            toggleActions: 'play none none reverse'
+          }
         }
-      }
-    );
+      );
+    }
 
     const animElements = slide.querySelectorAll(
       '.outcome-card, .grid-body-row, .metric-card, .pillar-card, .pipeline-node, .role-grid-card, .skill-pill, .filter-box, .profile-preview-card, .gauge-card, .sla-step-node, .engagement-card, .team-card'
@@ -96,6 +101,7 @@ function updateNavigationState(index) {
     const cpIdx = parseInt(cp.getAttribute('data-idx'));
     cp.classList.toggle('active', cpIdx <= index);
   });
+  document.body.classList.toggle('slide-10-active', index === 9);
 
   if (index === 3) {
     animateCounters('#slide-4 .counter');

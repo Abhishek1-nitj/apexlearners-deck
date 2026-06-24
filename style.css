@@ -207,6 +207,25 @@ input, select, textarea {
   box-shadow: var(--shadow-neon-primary);
 }
 
+#slide-6 .slide-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#slide-6 .slide-title-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#slide-6 .slide-subhead {
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  max-width: 760px;
+}
+
 /* ==========================================================================
    GLOBAL NAVIGATION, PROGRESS & CONTROLS
    ========================================================================== */
@@ -459,7 +478,8 @@ input, select, textarea {
   font-weight: 800;
   margin: 0 0 18px;
   letter-spacing: -0.04em;
-  text-wrap: balance;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .gradient-text {
@@ -469,21 +489,30 @@ input, select, textarea {
 }
 
 .hero-tagline {
-  font-size: clamp(1.05rem, 1.55vw, 1.35rem);
+  font-size: clamp(0.98rem, 1.25vw, 1.18rem);
   color: var(--color-text-secondary);
   line-height: 1.45;
   max-width: 980px;
   margin: 0 auto 16px auto;
-  text-wrap: balance;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .trust-line {
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.74);
-  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 800;
   margin: 0 auto 22px auto;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.08), 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 .pipeline-flow {
@@ -491,9 +520,9 @@ input, select, textarea {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  overflow: auto hidden;
+  flex-wrap: wrap;
+  white-space: normal;
+  overflow: hidden;
   padding: 18px 20px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
@@ -502,6 +531,26 @@ input, select, textarea {
   border-radius: 24px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   font-size: 0.84rem;
+}
+
+#slide-1 .pipeline-flow {
+  gap: 8px 10px;
+  padding: 12px 14px;
+  background: none;
+  border: 1px solid rgba(126, 140, 255, 0.22);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
+}
+
+#slide-1 .pipeline-flow__item {
+  flex: 1 1 145px;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+
+#slide-1 .pipeline-flow__arrow {
+  flex: 0 0 auto;
+  font-size: 1rem;
 }
 
 .pipeline-flow__item {
@@ -960,9 +1009,9 @@ input, select, textarea {
 
 .timeline-90days {
   position: relative;
-  height: 110px;
+  height: 160px;
   margin-top: 32px;
-  padding: 18px 24px 16px;
+  padding: 18px 60px 22px;
   border: 1px solid rgba(126, 140, 255, 0.24);
   border-radius: 18px;
   background: rgba(8, 12, 24, 0.55);
@@ -971,7 +1020,7 @@ input, select, textarea {
 
 .timeline-bar {
   position: absolute;
-  top: 48px;
+  top: 56px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -981,17 +1030,25 @@ input, select, textarea {
 
 .timeline-point {
   position: absolute;
-  top: 48px;
+  top: 56px;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 120px;
+}
+
+.timeline-90days .timeline-point:first-child {
+  left: 18px !important;
+  transform: translate(0, -50%);
+  align-items: flex-start;
+  text-align: left;
 }
 
 .timeline-point-end {
   left: auto !important;
-  right: 0;
+  right: 8%;
   transform: translate(0, -50%);
   align-items: flex-end;
 }
@@ -1023,12 +1080,15 @@ input, select, textarea {
   font-family: var(--font-family-header);
   font-size: 0.85rem;
   font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .point-label {
   font-size: 0.75rem;
   color: var(--color-text-secondary);
   white-space: nowrap;
+  line-height: 1;
 }
 
 .metrics-grid {
@@ -1799,6 +1859,31 @@ input, select, textarea {
 .role-grid-card:hover .role-card-icon {
   background: var(--color-secondary-glow);
   color: var(--color-secondary);
+}
+
+#slide-10 .slide-header {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 28px;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#slide-10 .roles-grid-wrapper {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: start;
+  margin-bottom: 56px;
+}
+
+#slide-10 {
+  padding-bottom: 180px;
+}
+
+body.slide-10-active .slide-indicator-text {
+  top: auto;
+  bottom: 10px;
 }
 
 /* ==========================================================================

@@ -381,69 +381,6 @@
         </div>
       </section>
 
-      <!-- Slide 7: Candidate Profile -->
-      <section class="slide" id="slide-7">
-        <div class="slide-content grid-slide">
-          <div class="slide-header">
-            <span class="slide-num">07</span>
-            <h2>Candidate Profile</h2>
-          </div>
-          <div class="profile-layout">
-            <div class="profile-card glow-border" id="interactive-profile-card">
-              <div class="card-top">
-                <div class="avatar-mock"><i data-lucide="user"></i></div>
-                <div class="candidate-meta">
-                  <h3 id="candidate-card-name">Sample Candidate</h3>
-                  <p class="role-badge" id="candidate-card-role">MIS Specialist</p>
-                </div>
-              </div>
-              <div class="card-details">
-                <div class="detail-item">
-                  <span class="lbl">Education</span>
-                  <div class="val-tags" id="candidate-edu-tags">
-                    <span class="tag">BCom</span>
-                    <span class="tag">BBA</span>
-                  </div>
-                </div>
-                <div class="detail-item">
-                  <span class="lbl">Experience</span>
-                  <span class="val" id="candidate-card-exp">Freshers, 0-3 Years</span>
-                </div>
-                <div class="detail-item">
-                  <span class="lbl">Core Strengths</span>
-                  <div class="val-tags">
-                    <span class="tag secondary">Advanced Excel</span>
-                    <span class="tag secondary">SQL</span>
-                    <span class="tag secondary">Dashboard Design</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="profile-configurator">
-              <h3>Customize Profile Parameters</h3>
-              <div class="config-groups">
-                <div class="config-group">
-                  <label>Education Type</label>
-                  <div class="config-buttons" id="edu-buttons">
-                    <button class="config-btn active" data-edu="BBA, BCom, BA">Business / Arts (BBA/BCom/BA)</button>
-                    <button class="config-btn" data-edu="BCA, BTech, BSc">Tech / Science (BCA/BTech/BSc)</button>
-                  </div>
-                </div>
-                <div class="config-group">
-                  <label>Salary Range: <span id="salary-val" class="accent-text">₹20K - ₹35K</span>/mo</label>
-                  <input type="range" min="15" max="50" value="28" class="slider" id="salary-slider">
-                  <div class="slider-scale">
-                    <span>₹15K</span>
-                    <span>₹30K</span>
-                    <span>₹50K</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Slide 8: Monthly Talent Supply Capacity -->
       <section class="slide" id="slide-8">
         <div class="slide-content grid-slide">
@@ -457,7 +394,7 @@
               <div class="bar-chart-container">
                 <!-- Bar 1 -->
                 <div class="chart-bar-group">
-                  <div class="bar-label">MIS</div>
+                  <div class="bar-label">MIS &amp; Reporting</div>
                   <div class="bar-track">
                     <div class="bar-fill" style="--height: 50%;" data-val="50"></div>
                   </div>
@@ -465,7 +402,7 @@
                 </div>
                 <!-- Bar 2 -->
                 <div class="chart-bar-group">
-                  <div class="bar-label">Operations</div>
+                  <div class="bar-label">Operations &amp; Support</div>
                   <div class="bar-track">
                     <div class="bar-fill" style="--height: 80%;" data-val="80"></div>
                   </div>
@@ -473,7 +410,7 @@
                 </div>
                 <!-- Bar 3 -->
                 <div class="chart-bar-group">
-                  <div class="bar-label">Analytics</div>
+                  <div class="bar-label">Analytics &amp; Business</div>
                   <div class="bar-track">
                     <div class="bar-fill" style="--height: 30%;" data-val="30"></div>
                   </div>
@@ -481,7 +418,7 @@
                 </div>
                 <!-- Bar 4 -->
                 <div class="chart-bar-group">
-                  <div class="bar-label">Customer Success</div>
+                  <div class="bar-label">Customer Success &amp; HR</div>
                   <div class="bar-track">
                     <div class="bar-fill" style="--height: 40%;" data-val="40"></div>
                   </div>
@@ -513,61 +450,6 @@
         </div>
       </section>
 
-      <!-- Slide 9: Placement Geography -->
-      <section class="slide" id="slide-9">
-        <div class="slide-content grid-slide">
-          <div class="slide-header">
-            <span class="slide-num">09</span>
-            <h2>Placement Geography</h2>
-          </div>
-          <div class="map-layout">
-            <div class="map-svg-container">
-              <!-- Stylized map of India SVG -->
-              <svg viewBox="0 0 500 550" class="india-map-svg">
-                <!-- Outer borders and simple background paths representation of India map outline -->
-                <path d="M150,110 L180,60 L210,60 L240,30 L260,30 L265,50 L290,60 L300,90 L285,115 L320,130 L310,165 L360,180 L390,200 L420,195 L430,220 L400,240 L380,230 L360,250 L345,230 L310,230 L290,260 L280,290 L320,320 L300,340 L280,330 L260,350 L270,390 L240,430 L220,490 L200,520 L195,500 L205,450 L180,410 L190,380 L160,350 L140,310 L130,270 L140,240 L110,230 L90,240 L70,225 L65,190 L90,170 L145,170 L160,140 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2.5"></path>
-                
-                <!-- Glowing pulsing city nodes -->
-                <!-- Delhi NCR -->
-                <circle cx="190" cy="170" r="6" class="map-node active-pulse" data-city="Delhi NCR"></circle>
-                <!-- Mumbai -->
-                <circle cx="120" cy="340" r="6" class="map-node active-pulse" data-city="Mumbai"></circle>
-                <!-- Pune -->
-                <circle cx="135" cy="365" r="6" class="map-node active-pulse" data-city="Pune"></circle>
-                <!-- Bangalore -->
-                <circle cx="180" cy="450" r="6" class="map-node active-pulse" data-city="Bangalore"></circle>
-                <!-- Chennai -->
-                <circle cx="210" cy="460" r="6" class="map-node active-pulse" data-city="Chennai"></circle>
-                <!-- Hyderabad -->
-                <circle cx="195" cy="390" r="6" class="map-node active-pulse" data-city="Hyderabad"></circle>
-                <!-- Kolkata -->
-                <circle cx="310" cy="280" r="6" class="map-node active-pulse" data-city="Kolkata"></circle>
-              </svg>
-            </div>
-            <div class="map-info-container">
-              <h3>Pan-India Candidate Sourcing & Deployment</h3>
-              <p class="map-p">We pool talent from across the country, train them, and place them in major hubs or configure remote setups.</p>
-              <div class="cities-grid">
-                <span class="city-pill active-city" data-node-idx="0">Delhi NCR</span>
-                <span class="city-pill" data-node-idx="1">Bangalore</span>
-                <span class="city-pill" data-node-idx="2">Hyderabad</span>
-                <span class="city-pill" data-node-idx="3">Pune</span>
-                <span class="city-pill" data-node-idx="4">Mumbai</span>
-                <span class="city-pill" data-node-idx="5">Kolkata</span>
-                <span class="city-pill" data-node-idx="6">Chennai</span>
-              </div>
-              <div class="remote-banner glow-border">
-                <div class="banner-icon"><i data-lucide="globe"></i></div>
-                <div class="banner-text">
-                  <h4>Remote PAN India</h4>
-                  <p>Equipped with professional laptops, power backups, and productivity monitors, fully ready to support distributed operations.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ==========================================
            SECTION 4: CANDIDATE QUALITY
            ========================================== -->
@@ -584,244 +466,48 @@
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="sheet"></i></div>
               <h3>MIS Executive</h3>
-              <p>Specialists in structural report designs, cohort filtering, and complex workbook handling.</p>
+              <p>Builds MS Excel and Power BI dashboards, automates daily and weekly reports, and maintains data accuracy across departments.</p>
             </div>
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="line-chart"></i></div>
               <h3>Data Analyst</h3>
-              <p>Deriving insights from large databases, designing visual representation models.</p>
+              <p>Cleans and analyzes business data using SQL and Excel, builds dashboards in Power BI or Tableau, and shares insights with stakeholders.</p>
             </div>
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="presentation"></i></div>
               <h3>Reporting Analyst</h3>
-              <p>Developing operational reports, scheduling deliverables, auditing metric consistency.</p>
+              <p>Prepares recurring MIS and management reports, tracks KPIs, and ensures timely, error-free reporting to leadership.</p>
             </div>
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="pie-chart"></i></div>
-              <h3>Operations Analyst</h3>
-              <p>Auditing process flow constraints, validating team performance markers.</p>
+              <h3>Operations Executive</h3>
+              <p>Monitors day-to-day process execution, tracks SLAs and TAT, and resolves escalations across teams.</p>
             </div>
             <!-- Row 2 -->
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="search-code"></i></div>
               <h3>Business Analyst</h3>
-              <p>Bridging technology implementation and business logic, mapping process workflows.</p>
+              <p>Gathers business requirements, documents processes, and works with tech and operations teams to improve workflows.</p>
             </div>
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="headphones"></i></div>
               <h3>CRM Executive</h3>
-              <p>Managing automated customer sequences, tracking retention health indicators.</p>
+              <p>Manages customer data in CRM tools like Salesforce or Zoho, tracks leads and follow-ups, and reports on retention metrics.</p>
             </div>
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="dollar-sign"></i></div>
               <h3>Finance Executive</h3>
-              <p>Auditing balance journals, generating invoicing pipelines, reconciliation work.</p>
+              <p>Handles invoicing, vendor reconciliation, and basic bookkeeping using Tally or Excel; supports monthly closing activities.</p>
             </div>
             <div class="role-grid-card hover-glow">
               <div class="role-card-icon"><i data-lucide="users-round"></i></div>
               <h3>HR Executive</h3>
-              <p>Driving candidate engagement workflows, coordinating recruiter SLA actions.</p>
+              <p>Manages candidate sourcing, screening calls, interview scheduling, and onboarding coordination.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 11: Skills Stack -->
-      <section class="slide" id="slide-11">
-        <div class="slide-content grid-slide">
-          <div class="slide-header">
-            <span class="slide-num">11</span>
-            <h2>Skills Stack</h2>
-          </div>
-          <div class="skills-stack-layout">
-            <div class="skills-column standard-skills">
-              <h3>Core Operational Stack</h3>
-              <div class="skills-pills">
-                <div class="skill-pill"><i data-lucide="file-spreadsheet"></i> Advanced Excel (VBA/Macros/PowerQuery)</div>
-                <div class="skill-pill"><i data-lucide="database"></i> SQL (Queries/Joins/Aggregations)</div>
-                <div class="skill-pill"><i data-lucide="bar-chart-3"></i> Power BI & Tableau (Interactive Dashboards)</div>
-                <div class="skill-pill"><i data-lucide="mail"></i> Corporate Email Ethics & Communication</div>
-                <div class="skill-pill"><i data-lucide="check-square"></i> Project Documentation (Jira/Asana)</div>
-              </div>
-            </div>
-            <div class="skills-column ai-skills glow-border">
-              <div class="ai-badge"><i data-lucide="sparkles"></i> FUTURE-PROOFED</div>
-              <h3>AI Co-Pilot Skills Stack</h3>
-              <div class="skills-pills">
-                <div class="skill-pill ai"><i data-lucide="message-square-text"></i> ChatGPT & Claude for Problem Solving</div>
-                <div class="skill-pill ai"><i data-lucide="code-2"></i> GitHub Copilot for Faster Data Operations</div>
-                <div class="skill-pill ai"><i data-lucide="search"></i> AI-Powered Market Research & Synthesis</div>
-                <div class="skill-pill ai"><i data-lucide="workflow"></i> Productivity & Workflow Automation</div>
-              </div>
-              <p class="ai-desc">Candidates are trained to double output speeds by wrapping tasks in AI pipelines.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 12: Candidate Assessment Framework -->
-      <section class="slide" id="slide-12">
-        <div class="slide-content full-slide">
-          <div class="slide-header">
-            <span class="slide-num">12</span>
-            <h2>Candidate Assessment Framework</h2>
-          </div>
-          <div class="assessment-framework-container">
-            <div class="radar-box-mock">
-              <!-- Radar/Spider Chart Visualization -->
-              <svg viewBox="0 0 200 200" class="radar-chart">
-                <polygon points="100,20 170,70 145,150 55,150 30,70" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></polygon>
-                <polygon points="100,50 148,85 131,133 69,133 52,85" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></polygon>
-                <polygon points="100,75 125,92 116,116 84,116 75,92" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></polygon>
-                <!-- Axis lines -->
-                <line x1="100" y1="100" x2="100" y2="20" stroke="rgba(255,255,255,0.2)"></line>
-                <line x1="100" y1="100" x2="170" y2="70" stroke="rgba(255,255,255,0.2)"></line>
-                <line x1="100" y1="100" x2="145" y2="150" stroke="rgba(255,255,255,0.2)"></line>
-                <line x1="100" y1="100" x2="55" y2="150" stroke="rgba(255,255,255,0.2)"></line>
-                <line x1="100" y1="100" x2="30" y2="70" stroke="rgba(255,255,255,0.2)"></line>
-                <!-- Candidate Area -->
-                <polygon points="100,30 160,75 135,135 65,140 45,80" fill="rgba(99, 102, 241, 0.4)" stroke="rgba(99, 102, 241, 0.85)" stroke-width="2" class="radar-poly"></polygon>
-                <!-- Text elements -->
-                <text x="100" y="15" text-anchor="middle" class="radar-lbl">Technical Skills</text>
-                <text x="180" y="70" text-anchor="start" class="radar-lbl">Communication</text>
-                <text x="155" y="160" text-anchor="start" class="radar-lbl">Aptitude</text>
-                <text x="45" y="160" text-anchor="end" class="radar-lbl">SLA Readiness</text>
-                <text x="20" y="70" text-anchor="end" class="radar-lbl">AI Copilot</text>
-              </svg>
-            </div>
-            <div class="assessment-categories">
-              <h3>Strict Filtering Thresholds</h3>
-              <div class="filters-row">
-                <div class="filter-box">
-                  <div class="box-header"><span>Technical Speed Tests</span><span class="score-tag">85% Min</span></div>
-                  <p>Candidates must solve complex Excel/SQL datasets against tight limits.</p>
-                </div>
-                <div class="filter-box">
-                  <div class="box-header"><span>Email & Comm Audits</span><span class="score-tag">A Grade</span></div>
-                  <p>Writing and spoken English mock checks overseen by senior trainers.</p>
-                </div>
-                <div class="filter-box">
-                  <div class="box-header"><span>Case Interview Sprints</span><span class="score-tag">Pass/Fail</span></div>
-                  <p>Solving open business operational crises in live team setups.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 13: Sample Candidate Scorecard -->
-      <section class="slide" id="slide-13">
-        <div class="slide-content grid-slide">
-          <div class="slide-header">
-            <span class="slide-num">13</span>
-            <h2>Sample Candidate Scorecard</h2>
-          </div>
-          <div class="scorecard-container">
-            <div class="scorecard-main glow-border">
-              <div class="scorecard-top">
-                <div class="score-profile">
-                  <div class="score-avatar"><i data-lucide="check-square"></i></div>
-                  <div>
-                    <h3>Verified Competency Certificate</h3>
-                    <p>Candidate ID: AL-2026-098</p>
-                  </div>
-                </div>
-                <div class="overall-badge-container">
-                  <div class="overall-num">84%</div>
-                  <div class="overall-lbl">Agg. Score</div>
-                </div>
-              </div>
-              <div class="score-items">
-                <!-- Skill 1 -->
-                <div class="score-item">
-                  <div class="score-meta"><span>Excel Skills</span><strong class="score-number" data-skill-val="88">88%</strong></div>
-                  <div class="score-slider-track"><div class="score-slider-fill" style="width: 88%"></div></div>
-                </div>
-                <!-- Skill 2 -->
-                <div class="score-item">
-                  <div class="score-meta"><span>Power BI & Visuals</span><strong class="score-number" data-skill-val="82">82%</strong></div>
-                  <div class="score-slider-track"><div class="score-slider-fill" style="width: 82%"></div></div>
-                </div>
-                <!-- Skill 3 -->
-                <div class="score-item">
-                  <div class="score-meta"><span>Business Communication</span><strong class="score-number" data-skill-val="84">84%</strong></div>
-                  <div class="score-slider-track"><div class="score-slider-fill" style="width: 84%"></div></div>
-                </div>
-                <!-- Skill 4 -->
-                <div class="score-item">
-                  <div class="score-meta"><span>Business Aptitude</span><strong class="score-number" data-skill-val="80">80%</strong></div>
-                  <div class="score-slider-track"><div class="score-slider-fill" style="width: 80%"></div></div>
-                </div>
-                <!-- Skill 5 -->
-                <div class="score-item">
-                  <div class="score-meta"><span>Interview Readiness</span><strong class="score-number" data-skill-val="86">86%</strong></div>
-                  <div class="score-slider-track"><div class="score-slider-fill" style="width: 86%"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="scorecard-text-side">
-              <h3>Drastically Improves Credibility</h3>
-              <p class="scorecard-p">No more guesswork. Before you interview any Aspire candidate, you get standard scorecard credentials tracking metrics that matter to delivery managers.</p>
-              <div class="scorecard-feature-box">
-                <i data-lucide="shield-alert"></i>
-                <div>
-                  <h4>Standardized Assessment Metrics</h4>
-                  <p>Every cohort runs through identical testing sandboxes, ensuring score parity.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 14: Sample Candidate Profiles -->
-      <section class="slide" id="slide-14">
-        <div class="slide-content full-slide">
-          <div class="slide-header">
-            <span class="slide-num">14</span>
-            <h2>Sample Candidate Profiles</h2>
-          </div>
-          <div class="profile-cards-container">
-            <!-- Candidate A -->
-            <div class="profile-preview-card hover-glow">
-              <div class="badge-row"><span class="card-badge orange">MIS SPECIALIST</span></div>
-              <h3 class="candidate-name">Candidate A</h3>
-              <div class="cand-details-row">
-                <div class="cand-col"><strong>Degree:</strong> BCom</div>
-                <div class="cand-col"><strong>Exp:</strong> Fresher</div>
-              </div>
-              <div class="cand-skills-row">
-                <span class="c-skill">Excel</span>
-                <span class="c-skill">Power BI</span>
-                <span class="c-skill">SQL</span>
-                <span class="c-skill">AI Writing</span>
-              </div>
-              <div class="salary-box">
-                <span class="sal-lbl">Expected Salary</span>
-                <span class="sal-val">₹28,000 / mo</span>
-              </div>
-              <button class="hire-simulation-btn" data-candidate="Candidate A"><i data-lucide="user-plus"></i> Simulate Hiring Candidate A</button>
-            </div>
-            <!-- Candidate B -->
-            <div class="profile-preview-card hover-glow">
-              <div class="badge-row"><span class="card-badge purple">BUSINESS ANALYST</span></div>
-              <h3 class="candidate-name">Candidate B</h3>
-              <div class="cand-details-row">
-                <div class="cand-col"><strong>Degree:</strong> BTech</div>
-                <div class="cand-col"><strong>Exp:</strong> 1 Year</div>
-              </div>
-              <div class="cand-skills-row">
-                <span class="c-skill">SQL</span>
-                <span class="c-skill">Python</span>
-                <span class="c-skill">Power BI</span>
-                <span class="c-skill">Automation</span>
-              </div>
-              <div class="salary-box">
-                <span class="sal-lbl">Expected Salary</span>
-                <span class="sal-val">₹40,000 / mo</span>
-              </div>
-              <button class="hire-simulation-btn" data-candidate="Candidate B"><i data-lucide="user-plus"></i> Simulate Hiring Candidate B</button>
+            <div class="role-grid-card hover-glow">
+              <div class="role-card-icon"><i data-lucide="headset"></i></div>
+              <h3>Customer Support / Process Associate</h3>
+              <p>Handles voice and non-voice customer queries, logs tickets in CRM systems, and ensures resolution within defined SLAs.</p>
             </div>
           </div>
         </div>
@@ -983,7 +669,7 @@
         <div class="slide-content full-slide">
           <div class="slide-header">
             <span class="slide-num">18</span>
-            <h2>Hiring Process & SLA</h2>
+            <h2>Hiring Process</h2>
           </div>
           <div class="sla-timeline-container">
             <div class="timeline-nodes-horizontal">
@@ -992,88 +678,89 @@
                 <span class="node-day">Day 0</span>
                 <div class="node-dot-wrap"><div class="dot"></div></div>
                 <h4>Requirement Received</h4>
-                <p>Submit target role profiles, volumes, and custom skill metrics.</p>
+                <p>Share your role profiles, hiring volumes, and must-have skills.</p>
               </div>
               <!-- Step 2 -->
               <div class="sla-step-node hover-glow active">
                 <span class="node-day">Day 2</span>
                 <div class="node-dot-wrap"><div class="dot"></div></div>
                 <h4>Profiles Shared</h4>
-                <p>We filter and submit pre-screened resume folders and scorecards.</p>
+                <p>You receive pre-screened, scorecard-backed candidate profiles.</p>
               </div>
               <!-- Step 3 -->
               <div class="sla-step-node hover-glow active">
                 <span class="node-day">Day 5</span>
                 <div class="node-dot-wrap"><div class="dot"></div></div>
                 <h4>Interviews Completed</h4>
-                <p>Your team conducts standard video panels or custom case audits.</p>
+                <p>Your team runs interviews, panels, or case-based assessments.</p>
               </div>
               <!-- Step 4 -->
               <div class="sla-step-node hover-glow active">
                 <span class="node-day">Day 7</span>
                 <div class="node-dot-wrap"><div class="dot"></div></div>
                 <h4>Offer Rollout</h4>
-                <p>Select candidates and initiate formal engagement letters.</p>
+                <p>Selected candidates receive formal offers and engagement letters.</p>
               </div>
               <!-- Step 5 -->
               <div class="sla-step-node hover-glow active">
                 <span class="node-day">Day 14</span>
                 <div class="node-dot-wrap"><div class="dot"></div></div>
                 <h4>Day of Joining</h4>
-                <p>Selected hires begin active onboarding inside your company structure.</p>
+                <p>New hires onboard and integrate into your company structure.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Slide 19: Engagement Models -->
+      <!-- Slide 19: Choose How You Want to Hire -->
       <section class="slide" id="slide-19">
         <div class="slide-content full-slide">
           <div class="slide-header">
             <span class="slide-num">19</span>
-            <h2>Engagement Models</h2>
+            <h2>Choose How You Want to Hire</h2>
           </div>
           <div class="engagement-cards-container">
             <!-- Model 1 -->
             <div class="engagement-card hover-glow">
               <div class="card-glow-element"></div>
               <div class="engagement-icon"><i data-lucide="user-check"></i></div>
-              <h3>Direct Placement</h3>
-              <p class="model-subtitle">For Standard Ongoing Roles</p>
+              <h3>Direct Hire</h3>
+              <p class="model-subtitle">For 1–10 roles a month</p>
               <ul class="model-features">
                 <li><i data-lucide="check"></i> 48-Hour Profile Turnaround</li>
-                <li><i data-lucide="check"></i> Standard Candidate Scorecards</li>
+                <li><i data-lucide="check"></i> Vetted Candidate Scorecards</li>
                 <li><i data-lucide="check"></i> 90-Day Free Replacement SLA</li>
               </ul>
-              <button class="engagement-btn" onclick="scrollToSlide(20)">Select Direct</button>
+              <button class="engagement-btn" onclick="scrollToSlide(20)">Start Direct Hiring</button>
             </div>
             <!-- Model 2 -->
             <div class="engagement-card hover-glow featured">
               <div class="card-glow-element"></div>
-              <div class="featured-badge"><i data-lucide="sparkles"></i> POPULAR</div>
+              <div class="featured-badge"><i data-lucide="sparkles"></i> Popular</div>
               <div class="engagement-icon"><i data-lucide="users"></i></div>
-              <h3>Bulk Hiring Sprints</h3>
-              <p class="model-subtitle">For Scaling New Functions</p>
+              <h3>Bulk Hiring</h3>
+              <p class="model-subtitle">For 10–50+ roles a month</p>
               <ul class="model-features">
-                <li><i data-lucide="check"></i> Ideal for 10-50+ roles monthly</li>
-                <li><i data-lucide="check"></i> Specialized batch assessments</li>
-                <li><i data-lucide="check"></i> Parallel interviewer support</li>
+                <li><i data-lucide="check"></i> Built for 10–50+ roles monthly</li>
+                <li><i data-lucide="check"></i> Specialized Batch Assessments</li>
+                <li><i data-lucide="check"></i> Parallel Interviewer Support</li>
               </ul>
-              <button class="engagement-btn active" onclick="scrollToSlide(20)">Select Bulk</button>
+              <button class="engagement-btn active" onclick="scrollToSlide(20)">Start Bulk Hiring</button>
             </div>
             <!-- Model 3 -->
             <div class="engagement-card hover-glow">
               <div class="card-glow-element"></div>
+              <div class="featured-badge"><i data-lucide="briefcase"></i> ENTERPRISE</div>
               <div class="engagement-icon"><i data-lucide="sliders"></i></div>
-              <h3>Custom Batch Engine</h3>
-              <p class="model-subtitle">Bespoke Talent Pipelines</p>
+              <h3>Enterprise</h3>
+              <p class="model-subtitle">For 50+ roles or new functions</p>
               <ul class="model-features">
-                <li><i data-lucide="check"></i> Curriculum tailored to your tools</li>
-                <li><i data-lucide="check"></i> Co-branded training sprints</li>
-                <li><i data-lucide="check"></i> Exclusive placement rights</li>
+                <li><i data-lucide="check"></i> Built for 50+ roles or new skill lines</li>
+                <li><i data-lucide="check"></i> Curriculum Tailored to Your Tools</li>
+                <li><i data-lucide="check"></i> Exclusive Placement Rights</li>
               </ul>
-              <button class="engagement-btn" onclick="scrollToSlide(20)">Select Custom</button>
+              <button class="engagement-btn" onclick="scrollToSlide(20)">Talk to Sales</button>
             </div>
           </div>
         </div>

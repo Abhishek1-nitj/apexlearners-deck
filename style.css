@@ -348,6 +348,28 @@ input, select, textarea {
   font-weight: 700;
 }
 
+.slide-jump-input {
+  width: 72px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-primary);
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+}
+
+.slide-jump-input::-webkit-outer-spin-button,
+.slide-jump-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slide-jump-input[type="number"] {
+  appearance: textfield;
+}
+
 .progress-bar-container {
   position: relative;
   width: 100vw;

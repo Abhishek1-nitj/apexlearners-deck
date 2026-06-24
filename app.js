@@ -9,6 +9,7 @@ lucide.createIcons();
 const slidesContainer = document.querySelector('.slides-container');
 const progressFill = document.getElementById('global-progress-fill');
 const currSlideNumEl = document.getElementById('curr-slide-num');
+const slideJumpInput = document.getElementById('slide-jump-input');
 const prevBtn = document.getElementById('prev-slide-btn');
 const nextBtn = document.getElementById('next-slide-btn');
 
@@ -80,7 +81,9 @@ function initScroll() {
 }
 
 function updateNavigationState(index) {
-  currSlideNumEl.textContent = String(index + 1).padStart(2, '0');
+  const slideNumber = index + 1;
+  currSlideNumEl.textContent = String(slideNumber).padStart(2, '0');
+  if (slideJumpInput && document.activeElement !== slideJumpInput) slideJumpInput.value = slideNumber;
 
   document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
   if (index >= 0 && index < 3) document.querySelectorAll('.nav-btn')[0].classList.add('active');
@@ -125,10 +128,23 @@ function animateCounters(selector) {
 
 function scrollToSlide(index) {
   if (!scrollTween || !scrollTween.scrollTrigger) return;
+  index = Math.max(0, Math.min(numSlides - 1, index));
   const st = scrollTween.scrollTrigger;
   const maxScroll = st.end - st.start;
   const targetScroll = st.start + (index / (numSlides - 1)) * maxScroll;
   window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+}
+
+if (slideJumpInput) {
+  slideJumpInput.value = 1;
+  const jump = () => {
+    const n = parseInt(slideJumpInput.value, 10);
+    if (Number.isInteger(n) && n >= 1 && n <= numSlides) scrollToSlide(n - 1);
+  };
+  slideJumpInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') jump();
+  });
+  slideJumpInput.addEventListener('blur', jump);
 }
 
 if (prevBtn) {

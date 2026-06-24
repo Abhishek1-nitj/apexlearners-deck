@@ -3,6 +3,9 @@ gsap.registerPlugin(ScrollTrigger);
 const numSlides = 14;
 let activeSlideIndex = 0;
 let scrollTween = null;
+let wheelScrollLock = false;
+let wheelScrollTimer = null;
+let wheelScrollAccum = 0;
 
 lucide.createIcons();
 
@@ -22,7 +25,7 @@ function initScroll() {
     scrollTrigger: {
       trigger: '.viewport-wrapper',
       pin: true,
-      scrub: 0.1,
+      scrub: true,
       start: 'top top',
       end: () => '+=' + (slidesContainer.scrollWidth - window.innerWidth),
       invalidateOnRefresh: true,
@@ -37,6 +40,27 @@ function initScroll() {
       }
     }
   });
+
+  const viewportWrapper = slidesContainer.parentElement;
+  if (viewportWrapper) {
+    viewportWrapper.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const x = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : 0;
+      if (!x) return;
+      wheelScrollAccum += x;
+      if (wheelScrollLock || Math.abs(wheelScrollAccum) < 120) return;
+      const dir = wheelScrollAccum > 0 ? 1 : -1;
+      wheelScrollAccum = 0;
+      if (!dir) return;
+      wheelScrollLock = true;
+      scrollToSlide(activeSlideIndex + dir);
+      clearTimeout(wheelScrollTimer);
+      wheelScrollTimer = setTimeout(() => {
+        wheelScrollLock = false;
+        wheelScrollAccum = 0;
+      }, 350);
+    }, { passive: false });
+  }
 
   document.querySelectorAll('.slide').forEach((slide) => {
     const slideHeader = slide.querySelector('.slide-header');
@@ -138,7 +162,7 @@ function scrollToSlide(index) {
   const st = scrollTween.scrollTrigger;
   const maxScroll = st.end - st.start;
   const targetScroll = st.start + (index / (numSlides - 1)) * maxScroll;
-  window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+  window.scrollTo({ top: targetScroll });
 }
 
 if (slideJumpInput) {

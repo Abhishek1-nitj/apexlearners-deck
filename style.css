@@ -361,7 +361,7 @@ input, select, textarea {
   position: relative;
   cursor: pointer;
   display: grid;
-  grid-template-columns: repeat(21, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   align-items: center;
 }
 

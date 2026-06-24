@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const numSlides = 21;
+const numSlides = 20;
 let activeSlideIndex = 0;
 let scrollTween = null;
 

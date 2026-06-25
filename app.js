@@ -45,20 +45,14 @@ function initScroll() {
   if (viewportWrapper) {
     viewportWrapper.addEventListener('wheel', (e) => {
       e.preventDefault();
-      const x = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : 0;
-      if (!x) return;
-      wheelScrollAccum += x;
-      if (wheelScrollLock || Math.abs(wheelScrollAccum) < 120) return;
-      const dir = wheelScrollAccum > 0 ? 1 : -1;
-      wheelScrollAccum = 0;
-      if (!dir) return;
+      const x = Math.abs(e.deltaX) >= Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+      if (Math.abs(x) < 8 || wheelScrollLock) return;
       wheelScrollLock = true;
-      scrollToSlide(activeSlideIndex + dir);
+      scrollToSlide(activeSlideIndex + (x > 0 ? 1 : -1));
       clearTimeout(wheelScrollTimer);
       wheelScrollTimer = setTimeout(() => {
         wheelScrollLock = false;
-        wheelScrollAccum = 0;
-      }, 350);
+      }, 650);
     }, { passive: false });
   }
 
@@ -85,7 +79,7 @@ function initScroll() {
     }
 
     const animElements = slide.querySelectorAll(
-      '.outcome-card, .grid-body-row, .metric-card, .pillar-card, .pipeline-node, .role-grid-card, .skill-pill, .filter-box, .profile-preview-card, .gauge-card, .sla-step-node, .engagement-card, .team-card'
+      '.outcome-card, .grid-body-row, .metric-card, .pillar-card, .pipeline-node, .role-grid-card, .skill-pill, .filter-box, .profile-preview-card, .gauge-card, .sla-step-node, .engagement-card, .team-card, .blue-collar-card, .blue-collar-callout'
     );
 
     if (animElements.length) {
